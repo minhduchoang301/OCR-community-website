@@ -2,12 +2,12 @@
 Apart from the pre-trained EMNIST[0] ByMerge and ByClass database, we also test data on the IAM Dataset[1]
 
 ## Libraries and framework
-Tensorflow 1.13.1
-OpenCV
-Numpy
-Pandas
-craft-text-detection
-dhsegment
+Tensorflow 1.13.1/n
+OpenCV/n
+Numpy/n
+Pandas/n
+craft-text-detection/n
+dhsegment/n
 
 ## Training model
 By this time, our model should achieve a testing accuracy of 91% from nicely captured image (plain background with minimal noise). Planning to add RNN for auto0correction
