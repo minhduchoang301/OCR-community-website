@@ -1,6 +1,8 @@
 import craft
 import cv2
-
+import numpy as np
+import pandas as pd
+import craft
 
 class Preprocess():
     """To segment words from line and or chars from word

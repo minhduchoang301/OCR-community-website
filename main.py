@@ -1,5 +1,6 @@
 import tensorflow as tf
-from Prepoccess import Preprocess
+import cv2
+from Preproccess import Preprocess
 
 def main(input_dir: str, model_path: str): #, output_dir: str
     preprocess = Preprocess()
