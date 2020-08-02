@@ -1,8 +1,7 @@
 from flask import Flask, jsonify, request
 import os 
 from flask_cors import CORS
-from werkzeug.utils import secure_filename
-# from main import main 
+from main import main
 
 app = Flask(__name__)
 CORS(app)
@@ -28,8 +27,8 @@ def upload():
         return resp
     if file and allowed_file(file.filename):
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], 'file_uploaded'))
-        # result = main(os.path.join(UPLOAD_FOLDER, 'file_uploaded'), 'model_path')
-        result = jsonify({'message': 'Upload successfully'})
+        result = main(os.path.join(UPLOAD_FOLDER, 'file_uploaded'), '/Users/dl/Desktop/OCR_Project/OCR-community-website/content/model')
+        # result = jsonify({'message': 'Upload successfully'})
         return result
     else:
         resp = jsonify({'message': 'Allowed file types are png, jpg, jpeg'})

@@ -1,6 +1,7 @@
 import craft
 import cv2
-
+import numpy as np
+import pandas as pd
 
 class Preprocess():
     """To segment words from line and or chars from word
@@ -138,7 +139,7 @@ class Preprocess():
 
         return cropped_lines
 
-    def crop_word_from_line(self, img)):
+    def crop_word_from_line(self, img):
         bboxes, polys, heatmap = craft.detect_text(img)
         i = 0
         word_list = []
@@ -158,7 +159,7 @@ class Preprocess():
             bot_right_y = int(max([y1, y2, y3, y4]))
 
             word = img[top_left_y:bot_right_y, top_left_x:bot_right_x]
-            word_list.append(word))
+            word_list.append(word)
         return word_list
 
     def crop_char_from_word(self, img):
