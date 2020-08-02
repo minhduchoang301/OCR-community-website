@@ -2,6 +2,7 @@ import tensorflow as tf
 from Preproccess import Preprocess
 import cv2
 
+
 def main(input_dir: str, model_path: str):  # , output_dir: str
     preprocess = Preprocess()
     model = tf.keras.models.load_model(model_path)
